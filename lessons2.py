@@ -1,2 +1,5 @@
 print("Hello World!")
 print("Good Day")
+print("Hello World!")
+print("Good Day")
+print("Very, very good day today!!!")
