@@ -4,14 +4,9 @@ import keyword
 new_name = str(input("Enter your new name: "))
 print()
 for symbol in new_name:
-    if new_name == '_':
-        print(True)
-        print("OK! Short and locanically!")
-        print(f'"{new_name}" is here! Welcome to \'FIGHT CLUB\'!!! ')
-        break
-    elif new_name == '__' or new_name == '___':
+    if new_name[0:2] == '__':
         print(False)
-        print("It's impossible, I'm very sorry.")
+        print("Bad idea")
         break
     elif new_name[0] in string.digits:
         print(False)
@@ -22,6 +17,7 @@ for symbol in new_name:
         print("This name is reserved. Try something else.")
         break
     elif symbol in string.punctuation:
+
         if symbol == "_":
             continue
         else:
@@ -36,8 +32,10 @@ for symbol in new_name:
         print(False)
         print("Space is not acceptable.")
         break
+    elif new_name == '_':
+        print(True)
+        break
 
 else:
     print(True)
     print(f'"{new_name}" is here! Welcome to \'FIGHT CLUB\'!!! ')
-
