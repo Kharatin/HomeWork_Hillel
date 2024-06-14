@@ -1,52 +1,8 @@
 num = str(input("Enter number: "))
 x = 1
-
-for i in num:
-    x *= int(i)
-num = str(x)
-
-x = 1
-for i in num:
-    x *= int(i)
-num = str(x)
-
-x = 1
-for i in num:
-    x *= int(i)
-num = str(x)
-
-x = 1
-for i in num:
-    x *= int(i)
-num = str(x)
-
-x = 1
-for i in num:
-    x *= int(i)
-num = str(x)
-
-x = 1
-for i in num:
-    x *= int(i)
-num = str(x)
-
-x = 1
-for i in num:
-    x *= int(i)
-num = str(x)
-
-x = 1
-for i in num:
-    x *= int(i)
-num = str(x)
-
-x = 1
-for i in num:
-    x *= int(i)
-num = str(x)
-
-x = 1
-for i in num:
-    x *= int(i)
-
+while len(num) > 1:
+    x = 1
+    for i in num:
+        x *= int(i)
+        num = str(x)
 print(num)
