@@ -3,7 +3,7 @@ def generate_cube_numbers(end):
     def innet():
         for i in range(2, number):
             result = i ** 3
-            if result <= number:
+            if result <= end:
                 yield result
     return innet()
 
