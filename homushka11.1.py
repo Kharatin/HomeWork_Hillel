@@ -1,15 +1,13 @@
 def prime_generator(end):
     number = int(end) + 1
-    def innet():
-        for result in range(2, number):
-            k = 0
-            for j in range(1, result + 1):
-                if result % j == 0:
-                    k += 1
-            if k == 2:
-                if result <= end:
-                    yield result
-    return innet()
+    for result in range(2, number):
+        k = 0
+        for j in range(1, result + 1):
+            if result % j == 0:
+                k += 1
+        if k == 2:
+            if result <= end:
+                yield result
 
 from inspect import isgenerator
 
