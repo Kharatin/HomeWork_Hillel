@@ -1,11 +1,9 @@
 def generate_cube_numbers(end):
     number = int(end) + 1
-    def innet():
-        for i in range(2, number):
-            result = i ** 3
-            if result <= end:
-                yield result
-    return innet()
+    for i in range(2, number):
+        result = i ** 3
+        if result <= end:
+            yield result
 
 from inspect import isgenerator
 
