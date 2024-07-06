@@ -29,7 +29,7 @@ class Purchase:
         self.products[item] = cnt
 
     def __str__(self):
-        return f"User: {self.user.name} {self.user.surname}\nItems:\n{self.products.values()}\n"
+        return f"User: {self.user.name} {self.user.surname}\nItems:\nlemon: {self.products.get(lemon)} pcs.\napple: {self.products.get(apple)} pcs."
 
     def get_total(self):
         total = 0
