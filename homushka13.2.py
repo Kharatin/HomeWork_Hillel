@@ -18,14 +18,13 @@ class Counter:
         self.current += 1
         if self.current > self.max_value:
             raise ValueError("A lot of")
-            return self.current
 
 
     def step_down(self):
         self.current -= 1
         if self.current < self.min_value:
             raise ValueError("FEW")
-            return self.current
+
 
 
     def get_current(self):
@@ -41,13 +40,13 @@ try:
     counter.step_up()  # ValueError
 except ValueError as e:
     print(e) # Достигнут максимум
-#assert counter.get_current() == 10, 'Test2'
+assert counter.get_current() == 10, 'Test2'
 
 counter.set_min(7)
 counter.step_down()
 counter.step_down()
 counter.step_down()
-#assert counter.get_current() == 7, 'Test3'
+assert counter.get_current() == 7, 'Test3'
 try:
     counter.step_down()  # ValueError
 except ValueError as e:
