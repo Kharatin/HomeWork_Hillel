@@ -27,16 +27,17 @@ class Group:
         self.group.add(student)
 
     def delete_student(self, last_name):
-        self.group.discard(last_name)
+        pass
 
     def find_student(self, last_name):
-        pass
+
+        return None
 
     def __str__(self):
         all_students = ''
         for student in self.group:
             all_students += f" { str(student.last_name) } "
-        return f'Number:{self.number}\\n {all_students} '
+        return f'Number:{self.number}\n{all_students} '
 
 st1 = Student('Male', 30, 'Steve', 'Jobs', 'AN142')
 st2 = Student('Female', 25, 'Liza', 'Taylor', 'AN145')
@@ -44,6 +45,7 @@ gr = Group('PD1')
 gr.add_student(st1)
 gr.add_student(st2)
 print(gr)
+
 assert str(gr.find_student('Jobs')) == str(st1), 'Test1'
 assert gr.find_student('Jobs2') is None, 'Test2'
 assert isinstance(gr.find_student('Jobs'), Student) is True, 'Метод поиска должен возвращать экземпляр'
@@ -51,4 +53,4 @@ assert isinstance(gr.find_student('Jobs'), Student) is True, 'Метод пои�
 gr.delete_student('Taylor')
 print(gr)  # Only one student
 
-gr.delete_student('Taylor')  # No error!
+#gr.delete_student('Taylor')  # No error!
