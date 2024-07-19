@@ -10,22 +10,22 @@ class Counter:
 
     def set_max(self, max_max):
         self.max_value = max_max
-
     def set_min(self, min_min):
         self.min_value = min_min
 
     def step_up(self):
-        self.current += 1
-        if self.current > self.max_value:
-            raise ValueError("A lot of")
-
+        if self.current>=self.max_value:
+            raise ValueError("Invalid value. Must be little low.(Достигнут максимум)")
+            return self.max_value
+        self.current = self.current + 1
+        return self.current
 
     def step_down(self):
-        self.current -= 1
-        if self.current < self.min_value:
-            raise ValueError("FEW")
-
-
+        if self.current <= self.min_value:
+            raise ValueError("Invalid value. Must be little more.(Достигнут минимум)")
+            return self.min_value
+        self.current = self.current - 1
+        return self.current
 
     def get_current(self):
         return self.current
